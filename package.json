@@ -1,5 +1,24 @@
 {
+  "name": "kafelearn-html",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garcetender7/kafelearn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garcetender7/kafelearn/issues"
+  },
+  "homepage": "https://github.com/garcetender7/kafelearn#readme",
+  "description": "",
   "dependencies": {
     "bootstrap-scss": "^5.2.1"
-  }
+  },
+  "browserslist": [
+    "last 5 version"
+  ]
 }

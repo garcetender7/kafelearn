@@ -17,6 +17,8 @@ html,body,p,a,img,strong,b,u,i,ul,li,h1,h2,h3,h4,h5,h6 {
 h1,h2,h3,h4,h5,h6 {
     font-family:$headingFont;
 	color:$headingColor;
+	line-height:40px;
+	font-weight:600;
 }
 a,li,li:hover,a:hover,a:focus,a:active {
 	text-decoration:none;

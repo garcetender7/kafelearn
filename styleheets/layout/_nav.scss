@@ -7,14 +7,15 @@
         display: none;
         flex-direction: column;
         justify-content: center;
-        width: 20px;
-        height: 20px;
+        align-items: flex-start;
+        width:55px;
+        height:55px;
         background-color: transparent;
         cursor: pointer;
 
         &::before{
-            content:"\e914";
-            font:20px 'iranoca';
+            content:"\e909";
+            font:35px $fonticon;
             color: #3a3a3a;
         }
 
@@ -86,7 +87,7 @@
                     width: 12px;
                     height: 12px;
                     box-shadow: 0 3px 6px 0 rgba(224, 201, 190, 0.46);
-                    background-color: #e0c9be;
+                    background-color:$secondryColor;
                     position:absolute;
                     bottom:-10px;
                     border-radius:50%;
@@ -143,8 +144,12 @@
                 padding-right: 15px;
                 margin-top: 20px;
 
-                li{
+                li {
                     justify-content:flex-start;
+
+                    a {
+                        font-size:15px;
+                    }
 
                     &.menu-item-has-children{
                         flex-direction:column;
@@ -166,7 +171,7 @@
                     }
 
                     .iconback::before{
-                        font:18px 'iranoca';
+                        font:18px $fonticon;
                         content: "\e900";
                         display:block;
                         transform:rotate(-90deg);
@@ -185,7 +190,7 @@
 
                     &:hover{
                         a{
-                            color:#e0c9be !important;
+                            color:$primaryColor !important;
                             font-weight:500;
                         } 
                         li a{

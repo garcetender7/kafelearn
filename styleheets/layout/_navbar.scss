@@ -1,0 +1,113 @@
+.navbar {
+	min-height:97px;
+	display:flex;
+	align-items:center;
+    padding:0 50px;
+	position:relative;
+
+    &::before{
+        content:'';
+        width:92.7%;
+        height:6px;
+        background-color:$accent1Color;
+        border-radius:0 0 12px 12px;
+        position:absolute;
+        top:0;
+    }
+
+    &::after{
+        content:'';
+        width:92.7%;
+        height:1px;
+        background-color:$accent1Color;
+        position:absolute;
+        bottom:0;
+    }
+    .navbar_right {
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        position: relative;
+        justify-content:flex-start;
+
+        .navbar_brand {
+            height:97px;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            overflow:hidden;
+            margin:0 0 0 10px;
+
+            img {
+                max-height:55px;
+            }
+        }
+
+        @include mediaQueris(max-lg){
+            flex-direction:row-reverse;
+            justify-content:flex-end;
+        }
+    }
+
+    .navbar_left {
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+         
+        .cart_btn{
+            width:55px;
+            height:46px;
+            border-radius:12px;
+            background-color:rgba($color: $primaryColor, $alpha: 0.5);
+            @include mediaQueris(max-md){
+                height:43px;
+                width:53px;
+            }
+        }
+
+        .acount_btn{
+            @extend .cart_btn;
+            background-color:rgba($color: $secondryColor, $alpha: 0.5);
+            margin-right: 20px;
+            @include mediaQueris(max-md){
+                margin-right: 10px;
+            }
+        }
+        
+
+
+
+    }
+    .head_sidenav{
+        min-height:70px;
+        display:none;
+        justify-content: space-between;
+        align-items:center;
+        padding:0 15px;
+
+        .closebtn_menu::before{
+            content:"\e909";
+            font:18px 'iranoca';
+            color:#3a3a3a !important;
+        }
+
+        @include mediaQueris(max-lg){
+            display:flex;
+        }
+    }
+
+    @include mediaQueris(max-lg){
+        padding:0 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

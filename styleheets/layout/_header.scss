@@ -1,0 +1,9 @@
+body.home{
+    .navbar{
+        position:absolute;
+
+        &::after,&::before{
+            display:none;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@font-face{
+    font-family:'iransans';
+    src:url('../../../../fonts/iransans/IRANSansWeb_Light.eot');
+    src:url('../../fonts/iransans/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), 
+    url('../../fonts/iransans/IRANSansWeb_Light.woff2') format('woff2'), 
+    url('../../fonts/iransans/IRANSansWeb_Light.woff') format('woff'), 
+    url('../../fonts/iransans/IRANSans_Light.ttf') format('truetype');
+	font-weight:300;
+	font-style:normal;
+}
+@font-face{
+    font-family:'iransans';
+    src:url('../../fonts/iransans/IRANSansWeb.eot');
+    src:url('../../fonts/iransans/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/iransans/IRANSansWeb.woff2') format('woff2'), 
+	url('../../fonts/iransans/IRANSansWeb.woff') format('woff'),
+	url('../../fonts/iransans/IRANSans.ttf') format('truetype');
+	font-weight:500;
+	font-style:normal;
+}
+@font-face{
+    font-family:'iransans';
+    src:url('../../fonts/iransans/IRANSansWeb_Bold.eot'); 
+    src:url('../../fonts/iransans/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), 
+	url('../../fonts/iransans/IRANSansWeb_Bold.woff2') format('woff2'), 
+	url('../../fonts/iransans/IRANSansWeb_Bold.woff') format('woff'), 
+	url('../../fonts/iransans/IRANSans_Bold.ttf') format('truetype'); 
+	font-weight:700;
+	font-style:normal;
+}
+@font-face{
+    font-family:'morabba';
+    src:url('../../fonts/morabba/Morabba-Regular.eot');
+    src:url('../../fonts/morabba/Morabba-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/morabba/Morabba-Regular.woff2') format('woff2'), 
+	url('../../fonts/morabba/Morabba-Regular.woff') format('woff'),
+	url('../../fonts/morabba/Morabba-Regular.ttf') format('truetype');
+	font-weight:500;
+	font-style:normal;
+}
+@font-face{
+    font-family:'morabba';
+    src:url('../../fonts/morabba/Morabba-Medium.eot');
+    src:url('../../fonts/morabba/Morabba-Medium.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/morabba/Morabba-Medium.woff2') format('woff2'), 
+	url('../../fonts/morabba/Morabba-Medium.woff') format('woff'),
+	url('../../fonts/morabba/Morabba-Medium.ttf') format('truetype');
+	font-weight:600;
+	font-style:normal;
+}
+@font-face{
+	font-family:'kafelearn';
+	src:url('../../webfonts/kafelearn.eot');
+	src:url('../../webfonts/kafelearn.eot?#iefix') format('embedded-opentype'),
+	url('../../webfonts/kafelearn.woff') format('woff'),
+	url('../../webfonts/kafelearn.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}

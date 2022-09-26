@@ -1,0 +1,27 @@
+@use "sass:map";
+
+@mixin mediaQueris($key){
+    $breakPoint: (
+         'max-xl':(max-width:1399.98px),
+         'max-lg':(max-width:1199.98px),
+         'max-md':(max-width:991.98px),
+         'max-sm':(max-width:767.98px),
+         'max-xs':(max-width:575.98px),
+         'max-xxs':(max-width:500.98px),
+
+         'min-xl':(min-width:1399.98px),
+         'min-lg':(min-width:1199.98px),
+         'min-md':(min-width:991.98px),
+         'min-sm':(min-width:767.98px),
+         'min-xs':(min-width:575.98px),
+         'min-xxs': (min-width:500.98px),
+    );
+
+    @if map-has-key($breakPoint, $key){
+        @media screen and #{inspect(map-get($breakPoint, $key))}{ 
+           @content;
+        }
+
+    }
+}
+

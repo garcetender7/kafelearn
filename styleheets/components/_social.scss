@@ -1,0 +1,40 @@
+.social_btns{
+    display: flex;
+    flex-direction:column;
+	justify-content: center;
+	align-items: center;
+    position:fixed;
+    left:25px;
+    bottom:20%;
+    @include mediaQueris(max-sm){
+        left:13px;
+    }
+
+    a{
+        margin:5px 0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        transition:all .3s ease-in-out;
+        @include circle(40, $primaryColor);
+        box-shadow:0 3px 9px 1px #fff;
+
+        i::before{
+            color:#fff;
+            font:18px $fonticon;   
+        }
+        &:first-child i::before{
+            content:'\e904';
+        }
+        &:nth-child(2) i::before{
+            content:'\e905';
+        }
+        &:last-child i::before{
+            content:'\e90c';
+        }
+        &:hover{
+            background:#FBC926;
+        }
+    }
+    
+}

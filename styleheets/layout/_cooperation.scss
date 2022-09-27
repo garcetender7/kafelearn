@@ -1,0 +1,64 @@
+.cooperation_section{
+    min-height:120px;
+    background:$primaryColor url('../../images/basic-img/back6.png') no-repeat;
+    background-size: cover;
+    margin:110px auto 70px auto;
+    position: relative;
+    @include mediaQueris(max-sm){
+        min-height:160px;
+    }
+
+    .cooperation_container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        flex-wrap:wrap;
+        height:100%;
+
+        .txt_cooper{
+            min-height:120px;
+            display:flex;
+            align-items:center;
+            @include mediaQueris(max-sm){
+                width:100%;
+            }
+            p{
+                font-family:$headingFont;
+                font-size:22px;
+                color:#fff;
+                font-weight:600;
+                line-height:38px;
+                @include mediaQueris(max-md){
+                    font-size:18px;
+                }
+            }
+        }
+        a{
+            color:$primaryColor;
+            border-radius:50px;
+            padding:7px 20px;
+            height:40px;
+            background-color:#fff;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:14px;
+            font-weight: 600;
+            box-shadow:0px 6px 12px 0px rgba(81, 81, 98, 0.11);
+            transition:transform .3s ease-in-out;
+            @include mediaQueris(max-md){
+                padding:7px 10px;
+            }
+            @include mediaQueris(max-sm){
+                position:absolute;
+                left:20px;
+                bottom:20px;
+                margin-top:50px;
+            }
+
+            &:hover{
+                transform:scale(1.05)
+            }
+        }
+    }
+}

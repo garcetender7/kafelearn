@@ -1,0 +1,104 @@
+.footer_section{
+    position:relative;
+    &::before{
+        content:'';
+        width:calc(100% - 30px);
+        height:6px;
+        background-color:$accent1Color;
+        border-radius:12px 12px 0 0;
+        position:absolute;
+        bottom:0;
+        margin:0 auto;
+    }
+    .foot{
+        .logo_foot{
+            height:55px;
+            margin-bottom:20px;
+            img{
+                max-height:55px;
+            }
+        }
+        .txt_foot{
+            max-height:100px;
+            overflow:hidden;
+
+            p{
+                font-size:14px;
+            }
+        }
+        strong{
+            color:$headingColor;
+            margin-bottom:20px;
+            font-size:15px;
+            display:block;
+        }
+
+        li{
+            margin-bottom:6px;
+            display:block;
+            a{
+                font-size:14px;
+
+                &::before{
+                    content:'';
+                    @include circle(7, $secondryColor);
+                    display: inline-block;
+                    margin-left:5px;
+                    transition:all .3s ease-in-out;
+                }
+            }
+
+            &:hover a::before{
+                margin-left:10px;
+                color:$primaryColor;
+            }
+        }
+        .info_contact{
+            margin-bottom:6px;
+            span{
+                font-size:14px;
+            }
+            a{
+                font-size:14px;
+            }
+        }
+    }
+    .copy_right{
+        min-height:50px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-top:40px;
+
+        p{
+            font-size:14px;
+            border-top:1px dashed $accent1Color;
+            padding:10px 20px;
+        }
+    }
+}
+.totop_btn {
+    a{  
+        @include circle(35, $accent1Color);
+        text-align:center;
+        transition:.3s all ease-in-out;
+        position:fixed;
+        bottom: 20px;
+        left: 27px;
+    
+        &::before{
+            content:"\e900";
+            font:22px $fonticon;
+            font-weight: 700;
+            font-size:12px;
+            color:$primaryColor;
+            line-height:35px;
+
+            &:hover{
+                bottom:2px;
+                -webkit-transition:.3s all;
+                transition:.3s all;
+            }
+        }
+    }
+}

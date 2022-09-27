@@ -25,5 +25,73 @@
     }
 }
 
+@mixin circle($radius, $color){
+    width:$radius+px;
+    height:$radius+px;
+    border-radius:50%;
+    background:$color;    
+}
+@mixin head_pora{
+    .head{
+        display:flex;
+        margin-bottom:70px;
+        position: relative;
+        flex-wrap: wrap;
+        @include mediaQueris(max-sm){
+            margin-bottom:50px;
+        }
+    
+        .right{
+            display:flex;
+            flex-direction:column;
+    
+            h3{
+                font-size:29px;
+            }
+    
+            .ps_text{
+                width:66%;
+                margin-top:10px;
+                @include mediaQueris(max-sm){
+                    width:100%;
+                }
+                
+                p{
+                    font-size:14px;
+                    line-height:27px;
+                }
+            }
+        }
+        .ps_ptn{
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+    
+            a{
+                height:40px;
+                padding:7px 15px;
+                border-radius:50px;
+                border:2px solid $primaryColor;
+                font-size:15px;
+                color:$primaryColor;
+                transition:all .3s ease-in-out;
+                display:inline-flex;
+                align-items:center;
+                background-color:#fff;
+    
+                &:hover{
+                    margin-top:2px;
+                }
+            }
+            @include mediaQueris(max-lg){
+                margin-top:15px;
+            }
+        }
+        @content;
+    }
+   
+}
+
 
 

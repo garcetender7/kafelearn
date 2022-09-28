@@ -1319,13 +1319,32 @@
                     }
                 }
                 .box_comment{
-                   max-height:270px;
-                   width:40%;
-                   margin:0 auto;
-                   @include mediaQueris(max-sm){
-                        width:65%;
-                    }
+                    max-height:270px;
+                    width:40%;
+                    margin:0 auto;
+                    position: absolute;
+                    transition: all 0.7s ease;
+                    display: none;
 
+                    @include mediaQueris(max-sm){
+                        width:75%;
+                    }
+                    &.first,&.second,&.third{
+                        display: block;
+                    }
+                    &.second {
+                        transform: scale(0.95) translateY(20px);
+                    }
+                      
+                    &.third {
+                        transform: scale(0.9) translateY(40px);
+                    }
+                      
+                    &.next {
+                        display: block;
+                        opacity: 0;
+                        transform: translateX(600px) rotate(2deg);
+                    }
                    .comm{
                         min-height:250px;
                         width:100%;
@@ -1363,6 +1382,53 @@
                             position:absolute;
                             color:rgba($color: #F5F5F5, $alpha: .6); 
                         } 
+                   }
+                }
+
+                #prev_btn{
+                    position:absolute;
+                    bottom:5%;
+                    left:47%;
+                    @include mediaQueris(max-md){
+                        left:43%;
+                    }
+                    @include mediaQueris(max-xxs){
+                        left:39%;
+                    }
+
+                   &::before{
+                    content:'\e90f';
+                    font:14px $fonticon;
+                    color:$textColor;
+                    transition:all .3s ease-in-out;
+                   }
+                   &:hover::before{
+                    font-size:18px;
+                    color:$headingColor;
+                   }
+                }
+                #next_btn{
+                    position:absolute;
+                    bottom:5%;
+                    right:47%;
+                    @include mediaQueris(max-md){
+                        right:43%;
+                    }
+                    @include mediaQueris(max-xxs){
+                        right:39%;
+                    }
+
+                   &::before{
+                    content:'\e90f';
+                    font:14px $fonticon;
+                    display:inline-block;
+                    transform:rotate(180deg);
+                    color:$textColor;
+                    transition:all .3s ease-in-out;
+                   }
+                   &:hover::before{
+                    font-size:18px;
+                    color:$headingColor;
                    }
                 }
             }

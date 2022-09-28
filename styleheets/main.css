@@ -262,9 +262,11 @@ body.home .navbar::after, body.home .navbar::before {
   cursor: pointer;
 }
 .navbar_menu .navbar_toggle::before {
-  content: "\e909";
+  content: "\e923";
   font: 35px "kafelearn";
   color: #3a3a3a;
+  position: relative;
+  top: 4px;
 }
 .navbar_menu .navbar_toggle span:not(:last-child) {
   margin-bottom: 5px;
@@ -2134,11 +2136,28 @@ body.home .navbar::after, body.home .navbar::before {
   max-height: 270px;
   width: 40%;
   margin: 0 auto;
+  position: absolute;
+  transition: all 0.7s ease;
+  display: none;
 }
 @media screen and (max-width: 767.98px) {
   .comment_section .back_img1 .back_img2 .total_comments .box_comment {
-    width: 65%;
+    width: 75%;
   }
+}
+.comment_section .back_img1 .back_img2 .total_comments .box_comment.first, .comment_section .back_img1 .back_img2 .total_comments .box_comment.second, .comment_section .back_img1 .back_img2 .total_comments .box_comment.third {
+  display: block;
+}
+.comment_section .back_img1 .back_img2 .total_comments .box_comment.second {
+  transform: scale(0.95) translateY(20px);
+}
+.comment_section .back_img1 .back_img2 .total_comments .box_comment.third {
+  transform: scale(0.9) translateY(40px);
+}
+.comment_section .back_img1 .back_img2 .total_comments .box_comment.next {
+  display: block;
+  opacity: 0;
+  transform: translateX(600px) rotate(2deg);
 }
 .comment_section .back_img1 .back_img2 .total_comments .box_comment .comm {
   min-height: 250px;
@@ -2175,4 +2194,56 @@ body.home .navbar::after, body.home .navbar::before {
   font: 120px "kafelearn";
   position: absolute;
   color: rgba(245, 245, 245, 0.6);
+}
+.comment_section .back_img1 .back_img2 .total_comments #prev_btn {
+  position: absolute;
+  bottom: 5%;
+  left: 47%;
+}
+@media screen and (max-width: 991.98px) {
+  .comment_section .back_img1 .back_img2 .total_comments #prev_btn {
+    left: 43%;
+  }
+}
+@media screen and (max-width: 500.98px) {
+  .comment_section .back_img1 .back_img2 .total_comments #prev_btn {
+    left: 39%;
+  }
+}
+.comment_section .back_img1 .back_img2 .total_comments #prev_btn::before {
+  content: "\e90f";
+  font: 14px "kafelearn";
+  color: #979494;
+  transition: all 0.3s ease-in-out;
+}
+.comment_section .back_img1 .back_img2 .total_comments #prev_btn:hover::before {
+  font-size: 18px;
+  color: #313131;
+}
+.comment_section .back_img1 .back_img2 .total_comments #next_btn {
+  position: absolute;
+  bottom: 5%;
+  right: 47%;
+}
+@media screen and (max-width: 991.98px) {
+  .comment_section .back_img1 .back_img2 .total_comments #next_btn {
+    right: 43%;
+  }
+}
+@media screen and (max-width: 500.98px) {
+  .comment_section .back_img1 .back_img2 .total_comments #next_btn {
+    right: 39%;
+  }
+}
+.comment_section .back_img1 .back_img2 .total_comments #next_btn::before {
+  content: "\e90f";
+  font: 14px "kafelearn";
+  display: inline-block;
+  transform: rotate(180deg);
+  color: #979494;
+  transition: all 0.3s ease-in-out;
+}
+.comment_section .back_img1 .back_img2 .total_comments #next_btn:hover::before {
+  font-size: 18px;
+  color: #313131;
 }/*# sourceMappingURL=main.css.map */

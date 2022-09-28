@@ -157,13 +157,34 @@ jQuery(document).ready(function($) {
 	});
 
 	//slider-comment
-    // $('.total_comments').slick({
-	// 	// infinite:false,
-	// 	// vertical: true,
-	// 	// verticalSwiping: true,
-	// 	// slidesToShow: 1,
-	// 	// slidesToScroll: 1,
-	// });
+    let $next = $('#next_btn'),
+      $prev = $('#prev_btn'),
+      $cards = $('.box_comment'),
+      $counter = 1;
+
+  	$next.on('click',function() {
+		if($counter === $cards.length-1){
+			$next.attr('disabled','disabled');
+		}
+    	$cards.filter('.first').addClass('next').removeClass('first')
+		.prev().addClass('first').removeClass('second')
+		.prev().addClass('second').removeClass('third')
+		.prev().addClass('third');
+      	$counter += 1;
+		$prev.removeAttr('disabled');
+  	});
+  
+  	$prev.on('click',function() {
+		console.log($counter);
+		if($counter === 1){
+			$prev.attr('disabled','disabled');
+		}else{
+			$cards.filter('.first').removeClass('first').addClass('second')
+			.next().removeClass('next').addClass('first')
+			.end().prev().removeClass('second').addClass('third');
+		}	
+  });
+
 
 // GoToTop button 
 	$("#back_top").hide();$(function () 

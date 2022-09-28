@@ -14,9 +14,11 @@
         cursor: pointer;
 
         &::before{
-            content:"\e909";
+            content:"\e923";
             font:35px $fonticon;
             color: #3a3a3a;
+            position: relative;
+            top: 4px;
         }
 
         span:not(:last-child){

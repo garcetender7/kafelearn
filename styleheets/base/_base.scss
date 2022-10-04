@@ -19,6 +19,10 @@ h1,h2,h3,h4,h5,h6 {
 	color:$headingColor;
 	line-height:40px;
 	font-weight:600;
+	user-select:none;
+}
+p,a,strong,b,u,i,span,li{
+	user-select:none;
 }
 a,li,li:hover,a:hover,a:focus,a:active {
 	text-decoration:none;

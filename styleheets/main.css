@@ -28,6 +28,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #313131;
   line-height: 40px;
   font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+p, a, strong, b, u, i, span, li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 a, li, li:hover, a:hover, a:focus, a:active {
